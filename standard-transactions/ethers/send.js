@@ -13,7 +13,9 @@ async function main() {
   // Creating and sending the transaction object
   const tx = await signer.sendTransaction({
     to: process.env.DEMO_CONTRACT,
-    value: ethers.utils.parseUnits("0.001", "ether"),
+    gasPrice: 10000000000,  // 指定gas price
+    gas: 250000 ,           // 指定gas值
+    value: ethers.utils.parseUnits("0.0001", "ether"),
   });
   console.log("Mining transaction...");
   console.log(`https://${network}.etherscan.io/tx/${tx.hash}`);

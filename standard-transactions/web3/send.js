@@ -17,7 +17,7 @@ async function main() {
   const tx = {
     from: signer.address,
     to: "0xeAD9C93b79Ae7C1591b1FB5323BD777E86e150d4",
-    value: web3.utils.toWei("0.001"),
+    value: web3.utils.toWei("0.0001"),
   };
   // Assigning the right amount of gas
   tx.gas = await web3.eth.estimateGas(tx);
