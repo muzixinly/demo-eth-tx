@@ -33,7 +33,7 @@ async function main() {
     to: process.env.STC_CONTRACT,
     // Encoded data payload representing the contract method call
     // data: iface.encodeFunctionData("echo", [`Hello world at ${Date.now()}!`]),
-    data: contract.methods.depositeFromStarcoinChain(to, amount).encodeABI(),
+    data: contract.methods.depositFromStarcoinChain(to, amount).encodeABI(),
     // An upper limit on the gas we're willing to spend
     // gas: "1250000",
     // gas: "0x6978", // 27000
